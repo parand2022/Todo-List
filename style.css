@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('Fonts/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'nunitoB';
+    src: url('Fonts/Nunito-Black.ttf');
+}
+@keyframes move {
+    80% {
+        right: -8.4em;
+        z-index: -1;
+    }
+    100% {
+        right: -8.4em;
+        z-index: 0;
+    }
+}
+@keyframes turn {
+    to { transform: rotate(1turn);}
+}
+* {
+    padding: 0; margin: 0;
+    border: none; outline: none;
+    box-sizing: border-box;
+    font-family: 'nunito';
+}
+:root {
+    --bgColor :#2d2d2d;
+    --lightColor :#f5f5f5;
+    --gray :#b9bac7;
+    --pink :#f01380;
+    --black :#131313;
+}
+body {
+    background-color: var(--bgColor);
+    color: var(--lightColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 5%;
+}
+.message {
+    position: absolute;
+    top: -50%;
+    z-index: 1;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6em;
+    font-size: 1.8rem;
+    padding: .5em 1em;
+    border-radius: .4em;
+}
+.message i {
+    font-size: 3rem;
+    color: #ff0000;
+}
+.closeBtn {
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: .4em;
+    cursor: pointer;
+}
+.close {
+    top: 10%;
+}
+.disappear {
+    display: none;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+header .text {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+.text h1 {
+    font-family: 'nunitoB';
+}
+.text p {
+    font-size: .9rem;
+    color: var(--gray);
+}
+header .logo {
+    font-size: 4rem;
+    color: var(--pink);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    width: 28em;
+    border-radius: 4em;
+}
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: .3em .5em;
+    font-size: 1.7rem;
+    width: 100%;
+}
+.inputContainer .input {
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+    font-size: .6em;
+    letter-spacing: 2px;
+}
+.button {
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.button:hover {
+    color: var(--pink);
+}
+form .optionContainer {
+    position: absolute;
+    top: 12%;
+    right: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6em;
+    font-size: 1rem;
+    z-index: -1;
+    cursor: pointer;
+}
+.optionContainer i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 1.1em;
+}
+.optionContainer i:hover {
+    transform: scale(1.05);
+}
+.study {
+    background-color: #560bad;
+}
+.work {
+    background-color: #fb5607;
+}
+.shopping {
+    background-color: #6a994e;
+}
+.move {
+    animation: move 1s ease-out forwards;
+}
+.move i {
+    animation: turn .5s .8s;
+}
+.planContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8em;
+}
+.planContainer div {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    border-radius: 4em;
+    padding: .5em 1em;
+}
+.planContainer div i:not(:first-child) {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.planContainer div p {
+    width: 100%;
+}
+.completed {
+    opacity: .3;
+    order: 2;
+    transition: all .2s;
+}
+.completed p {
+    text-decoration: line-through;
+}

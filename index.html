@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Icons/css/all.css">
+</head>
+<body>
+    <div class="message">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p>Enter Your Plan First!!!</p>
+        <button class="closeBtn">Got It</button>
+    </div>
+    <header>
+        <div class="text">
+            <h1>Todo List App</h1>
+            <p>Organize Your Life & Work With Todo List App</p>
+        </div>
+        <i class="fal fa-ballot-check logo"></i>
+    </header>
+    <main>
+        <form>
+            <div class="inputContainer">
+                <i class="fa-solid fa-pen-circle"></i>
+                <input type="text" class="input" placeholder="Things Todo...." maxlength="10">
+                <i class="fa-solid fa-circle-plus button"></i>
+            </div>
+            <div class="optionContainer">
+                <i class="fas fa-book study"></i>
+                <i class="fas fa-briefcase work"></i>
+                <i class="fas fa-cart-shopping shopping"></i>
+            </div>
+        </form>
+        <div class="planContainer"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
